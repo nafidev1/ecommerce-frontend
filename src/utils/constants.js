@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const backendLink = "http://localhost:3001/api";
+export const backendLink = "https://ecommerce-backend-b63w.onrender.com/api";
 
 export const ax = axios.create({
   baseURL: backendLink,
