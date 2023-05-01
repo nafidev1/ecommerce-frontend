@@ -26,6 +26,7 @@ const useCart = () => {
     let res;
     try {
       res = await ax.get("/cart/");
+      console.log('cart', res.data);
       cartDispatch({ type: "UPDATE_CART", payload: res.data });
     } catch (err) {
       console.log(err);
