@@ -52,6 +52,7 @@ function LoginPage() {
         authDispatch({ type: "AUTH_SUCCESS", payload: res.data });
         navigate(-1) || navigate("/");
       } catch (err) {
+        console.log(err);
         authDispatch({ type: "AUTH_FAILURE", payload: err.response?.data });
       }
     },
