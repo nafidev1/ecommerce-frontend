@@ -109,12 +109,14 @@ function TopNavbar() {
             />
             <PrivateComponent
               defaultComp={
-                <CustomNavLink
-                  route="/login"
-                  ariaText="Logout"
-                  icon={<IoMdLogIn size="100%" />}
-                  iconVariant="solid"
-                />
+                <Box size={"md"}>
+                  <CustomNavLink
+                    route="/login"
+                    ariaText="Logout"
+                    icon={<IoMdLogIn size="100%" />}
+                    iconVariant="solid"
+                  />
+                </Box>
               }
               authComp={
                 <IconButton
