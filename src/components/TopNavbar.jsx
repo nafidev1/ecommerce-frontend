@@ -108,6 +108,14 @@ function TopNavbar() {
               onClick={() => setIsShowSearch(!isShowSearch)}
             />
             <PrivateComponent
+              defaultComp={
+                <CustomNavLink
+                  route="/login"
+                  ariaText="Logout"
+                  icon={<IoMdLogIn size="100%" />}
+                  iconVariant="solid"
+                />
+              }
               authComp={
                 <IconButton
                   size={"md"}
@@ -212,7 +220,7 @@ function TopNavbar() {
               {user !== null && (
                 <CustomNavLink
                   label="small"
-                  handleClick={() => console.log("logging out")}
+                  handleClick={handleLogout}
                   ariaText="Logout"
                   icon={<BiLogOutCircle size="100%" />}
                   iconVariant="ghost"

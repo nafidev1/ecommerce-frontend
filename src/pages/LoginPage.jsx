@@ -49,7 +49,6 @@ function LoginPage() {
       authDispatch({ type: "AUTH_START" });
       try {
         const res = await ax.post("/auth/login", values);
-        console.log(res.data);
         authDispatch({ type: "AUTH_SUCCESS", payload: res.data });
         navigate(-1) || navigate("/");
       } catch (err) {
